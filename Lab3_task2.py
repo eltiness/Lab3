@@ -1,9 +1,6 @@
 # TODO Напишите функцию find_common_participants
 def find_common_participants(participants_first,participants_second,split_=","):
-   list_words_one=participants_first.split(split_)
-   list_words_two = participants_second.split(split_)
-   list_words=list_words_one+list_words_two
-   list_words = list(set(list_words))
+   list_words = list(set(participants_second.split(split_)).intersection(set(participants_first.split(split_))))
    list_words.sort()
    return list_words
 participants_first_group = "Иванов|Петров|Сидоров"
